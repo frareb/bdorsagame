@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainwindow</class>
+ <widget class="QMainWindow" name="mainwindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Course contre la mouche</string>
+  </property>
+  <property name="locale">
+   <locale language="French" country="France"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>510</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Démarrer la partie</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>371</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Initialisation du jeu</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>351</width>
+       <height>115</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="spinBox_nombreDeJoueurs">
+        <property name="minimum">
+         <number>2</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>4</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Taux de perte initial (%)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="spinBox_tauxDePerteInit">
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>40</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Nombre de joueurs</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Niveau de difficulté</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="spinBox_niveauDifficulte">
+        <property name="value">
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QCommandLinkButton" name="commandLinkButton_creerJoueurs">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>150</y>
+       <width>172</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Créer les joueurs</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>351</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Charger le fichier ITK</string>
+    </property>
+    <property name="icon">
+     <iconset theme="text-x-generic">
+      <normaloff>.</normaloff>.</iconset>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionQuitter_le_jeu"/>
+   </widget>
+   <widget class="QMenu" name="menu_Aide">
+    <property name="title">
+     <string>&amp;Aide</string>
+    </property>
+    <addaction name="action_propos"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Aide"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_propos">
+   <property name="text">
+    <string>à propos</string>
+   </property>
+  </action>
+  <action name="actionQuitter_le_jeu">
+   <property name="text">
+    <string>Quitter le jeu</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
